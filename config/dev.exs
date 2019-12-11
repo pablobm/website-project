@@ -2,7 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :website, Website.Repo,
-  username: "swm",
+  username: "shylands",
   password: "",
   database: "website_dev",
   hostname: "localhost",

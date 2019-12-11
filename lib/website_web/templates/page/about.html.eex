@@ -1,0 +1,12 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}!", name: "Belfast Elixir" %></h1>
+  <p>A productive but<br/>small user group based in Belfast.</p>
+</section>
+ 
+<section class="row">
+  <article class="column">
+    <h2>About Us</h2>
+
+  </article>
+
+</section>
