@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :website, Website.Repo,
-  username: "swm",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   database: "website_dev",
-  hostname: "localhost",
+  hostname: "db",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
