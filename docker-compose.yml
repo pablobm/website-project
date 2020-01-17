@@ -9,10 +9,10 @@ services:
       - .:/app
     environment:
       - MIX_ENV=dev
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_HOST=db
-      - POSTGRES_DB=website_dev
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGHOST=db
+      - PGDATABASE=website_dev
     depends_on:
       - db  
 
