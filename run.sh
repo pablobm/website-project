@@ -7,6 +7,10 @@ until psql -c '\q'; do
   sleep 1
 done
 
+mix deps.get
 mix ecto.create
 mix ecto.migrate
+
+cd assets && npm install && cd ..
+
 mix phx.server

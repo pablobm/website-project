@@ -7,19 +7,26 @@ services:
       - 4000:4000
     volumes:
       - .:/app
+      - deps:/app/deps
+      - node_modules:/app/assets/node_modules
     environment:
+      - NODE_ENV=development
       - MIX_ENV=dev
       - PGUSER=postgres
       - PGPASSWORD=postgres
       - PGHOST=db
       - PGDATABASE=website_dev
     depends_on:
-      - db  
+      - db
+    command: ["/app/run.sh"]
 
   db:
-    image: postgres:12-alpine 
+    image: postgres:12-alpine
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=website_dev
 
+volumes:
+  deps:
+  node_modules:

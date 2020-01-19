@@ -14,19 +14,17 @@ The website will then injest this API.
 
 ## Developing
 
-### Natively
+Natively:
 
-  
-  * export your env vars via `local.env.template` (this isn't loaded so amend, copy, paste and execute). 
+  * export your env vars via `local.env.template` (this isn't loaded so amend, copy, paste and execute).
   * `mix deps.get`
   * `mix ecto.setup`
   * `cd assets && npm install`
   * `mix phx.server`
 
-### Docker
+With Docker:
 
-  * `docker-compose build`
-  * `docker-compose up`
+  * `docker-compose up --build`
 
 Visit [`localhost:4000`](http://localhost:4000).
 
@@ -56,14 +54,14 @@ So with that thinking (this is up for discussion)  we would like the following:
 
 - Several 'static' pages:
 
-  - Home 
+  - Home
   - About Us
-  - Code of Conduct 
+  - Code of Conduct
   - Contact Us
-  
-- Medium posts for writeups on meetups 
 
-- TIL - some sort of oauth integration 
+- Medium posts for writeups on meetups
+
+- TIL - some sort of oauth integration
 
 
 ### Several Static Pages
@@ -71,7 +69,7 @@ So with that thinking (this is up for discussion)  we would like the following:
 Nothing fancy - just pages that don't need to be dynamically generated
 everytime.
 
-### Medium 
+### Medium
 
 This [https://medium.com/retainable/how-to-embed-medium-on-your-website-the-easy-way-41ac0a13231e](article) seems to be a good place to start.
 
