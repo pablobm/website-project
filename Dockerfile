@@ -10,5 +10,13 @@ RUN apk add --update npm
 RUN mix local.hex --force
 RUN mix local.rebar --force
 
+COPY mix.exs mix.lock /app/
+WORKDIR /app
+RUN mix deps.get
+
+COPY ./assets/package.json ./assets/package-lock.json /app/assets/
+WORKDIR /app/assets
+RUN npm install
+
 COPY . /app
 WORKDIR /app
