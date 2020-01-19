@@ -16,7 +16,7 @@ The website will then injest this API.
 
 Natively:
 
-  * export your env vars via `local.env.template` (this isn't loaded so amend, copy, paste and execute).
+  * `source local.env.template` (or any similar way to load these envvars).
   * `mix deps.get`
   * `mix ecto.setup`
   * `cd assets && npm install`
