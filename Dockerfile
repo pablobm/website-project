@@ -7,8 +7,8 @@ RUN apk add postgresql-client
 RUN apk add nodejs
 RUN apk add --update npm
 
-COPY . /app
-WORKDIR /app
-
 RUN mix local.hex --force
 RUN mix local.rebar --force
+
+COPY . /app
+WORKDIR /app
